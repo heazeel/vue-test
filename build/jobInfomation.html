@@ -1,0 +1,13 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="X-UA-Compatible" content="ie=edge"><meta id="i18n_pagename" content="jobInfomation,common"><title class="i18n" name="title">岗位信息</title><link rel="shortcut icon" type="image/x-icon" href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/logo.ico" media="screen"><link rel="stylesheet" href="styles/reset.css?v=1603850683777"><link rel="stylesheet" href="styles/common.css?v=1603850683777"><link rel="stylesheet" href="styles/jobInfomation.css?v=1603850683777"><script src="lib/jquery/jquery-3.2.1.min.js"></script><script src="lib/jquery/jquery.i18n.properties-1.2.7.js"></script><script src="lib/artTemplate/template-web.js"></script><script src="scripts/languages.js"></script></head><body><!--[if lt IE 9]>
+      <p class="chromeframe">
+        <span>您使用的IE浏览器版本过低，本站不再支持，</span>
+        <a href="//windows.microsoft.com/">升级您的IE浏览器</a>
+        <span>，或使用</span>
+        <a href="//www.google.cn/chrome/">Google Chrome</a><a>、</a
+        ><a href="//www.firefox.com.cn/download/">Firefox</a>
+        <span>等高级浏览器，将会得到更好的体验！</span>
+      </p>
+    <![endif]--><div class="page-nav-part"></div><div class="job-infomation-div container row"><div class="row"><h1 class="i18n part-title" name="job-infomation">岗位信息</h1><span class="orange-small-title">JOB INFOMATION</span></div><div class="col-offset-8-2"><ul class="job-infomation-ul" id="job-infomation-ul"></ul><script id="job-infomation-ul-script" type="text/html"> <% jobTypeList.forEach(typeList => {  %> <li>
+          <div class="title"><%= typeList.department %></div>
+          <ul> <% typeList.data.forEach(job => {  %> <li><a target="_blank" href="<%= job.url %>"><%= job.name %></a></li> <% })  %> </ul>
+        </li> <% }) %> </script></div></div><footer class="page-footer-part container row"></footer><script src="scripts/common.js?v=1603850683777"></script><script src="scripts/jobInfomation.js?v=1603850683777"></script></body></html>

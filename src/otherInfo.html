@@ -1,0 +1,328 @@
+<!--
+ * @Description: 新闻中心、媒体报道、资料下载
+ * @Author: linjia
+ * @Date: 2020-05-19 15:17:27
+ * @LastEditors: hezhijie
+ * @LastEditTime: 2020-10-16 10:59:30
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta id="i18n_pagename" content="otherInfo,common" />
+  <!-- 对应的多语言对应的语言文件 -->
+  <title class="i18n" name="title">加入我们</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/logo.ico"
+    media="screen" />
+  <link rel="stylesheet" href="styles/reset.css?v={{version}}" />
+  <link rel="stylesheet" href="styles/common.css?v={{version}}" />
+  <link rel="stylesheet" href="styles/otherInfo.css?v={{version}}" />
+  <!-- IE8 补丁 -->
+  <script src="lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="lib/jquery/jquery.i18n.properties-1.2.7.js"></script>
+  <script src="lib/artTemplate/template-web.js"></script>
+  <script src="scripts/languages.js"></script>
+</head>
+
+<body>
+  <!--[if lt IE 9]>
+      <p class="chromeframe">
+        <span>您使用的IE浏览器版本过低，本站不再支持，</span>
+        <a href="//windows.microsoft.com/">升级您的IE浏览器</a>
+        <span>，或使用</span>
+        <a href="//www.google.cn/chrome/">Google Chrome</a><a>、</a
+        ><a href="//www.firefox.com.cn/download/">Firefox</a>
+        <span>等高级浏览器，将会得到更好的体验！</span>
+      </p>
+    <![endif]-->
+  <!-- 头部导航 -->
+  <div class="page-nav-part"></div>
+
+  <div class="header"></div>
+  <div class="other-info-part">
+    <div class="other-info-div row">
+        <ul class="tab-ul">
+          <li class="i18n news-center active" name="news-center">新闻中心</li>
+          <li class="i18n media-report" name="media-report">媒体报道</li>
+          <li class="i18n source-download" name="source-download">资源下载</li>
+        </ul>
+      <div class="content-container">
+        <!-- 新闻中心 -->
+        <div id="news-center-part" class="tab-content">
+          <ul class="img-info-ul" id="news-center-part-ul"></ul>
+          <!-- <script id="news-center-part-ul-script" type="text/html">
+            <% 
+            newsList.forEach(news => { 
+              if (news.image && news.id!=1039 && news.id!=1038 && news.id!=1035) {
+            %>
+            <li>
+              <a target="_blank" href="<%= news.link %>">
+                <div class="img-div">
+                  <img src="<%= news.image %>" alt="新闻图片"/ onerror="this.parentNode.parentNode.parentNode.remove()">
+                </div>
+                <p><%= news.title %></p>
+                <span><%= news.timeShow%></span>
+              </a>
+            </li>
+            <%
+              } 
+            }) 
+            %>
+          </script> -->
+        </div>
+        <!-- 媒体报道 -->
+        <div id="media-report-part" class="tab-content">
+          <ul class="media-report-ul">
+            <!-- <li class="time-head">
+              <span>2020年</span>
+              <div></div>
+            </li> -->
+            <!-- <li>
+              <div class="time">
+                <span class="day">18</span>/
+                <span class="month">03</span>
+                <span class="i18n" name="month">月</span>
+              </div>
+              <span class="content">迅蚁获“国家重点支持领域高新技术企业”称号</span>
+              <span class="source">迅蚁</span>
+            </li> -->
+          </ul>
+        </div>
+
+        <!-- 资源下载 -->
+        <div id="source-download-part" class="tab-content">
+          <div class="small-title">LOGO</div>
+          <ul class="img-info-ul logo-ul">
+            <li>
+              <a id="logo-download" href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/logo.zip">
+                <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/imgs/logo-01.png">
+              </a>
+            </li>
+          </ul>
+          <div class="small-title i18n" name="video-download">视频下载</div>
+          <ul class="img-info-ul video-ul">
+            <li>
+              <div class="img-container">
+                <video class="pic" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/video/%E3%80%8C2018%E8%BF%85%E8%9A%81%E7%A7%8B%E5%AD%A3%E5%8F%91%E5%B8%83%E4%BC%9A%E3%80%8D%20-%20%E4%B8%A4%E5%91%A8%E5%B9%B4%E5%9B%9E%E9%A1%BE.mp4" poster="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/imgs/poster1.jpg"></video>
+                <div class="operation operation-active">
+                  <div class="circle play-btn btn-active">
+                    <div class="triangle"></div>
+                  </div>
+                  <div class="circle download-btn btn-active">
+                    <span></span>
+                    <div class="rec1"></div>
+                    <div class="tri1"></div>
+                    <div class="rec2"></div>
+                  </div>
+                </div>
+              </div>
+              <span>「2018迅蚁秋季发布会」 - 两周年回顾</span>
+            </li>
+            <li>
+              <div class="img-container">
+                <video class="pic" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/video/%E3%80%8C2018%E8%BF%85%E8%9A%81%E7%A7%8B%E5%AD%A3%E5%8F%91%E5%B8%83%E4%BC%9A%E3%80%8D%20-%20%E6%8F%AD%E7%A7%98%E4%B8%93%E4%B8%BA%E7%89%A9%E6%B5%81%E8%80%8C%E7%94%9F%E7%9A%84RA3%E6%97%A0%E4%BA%BA%E6%9C%BA.mp4" poster="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/imgs/poster2.jpg"></video>
+                <div class="operation operation-active">
+                  <div class="circle play-btn btn-active">
+                    <div class="triangle"></div>
+                  </div>
+                  <div class="circle download-btn btn-active">
+                    <span></span>
+                    <div class="rec1"></div>
+                    <div class="tri1"></div>
+                    <div class="rec2"></div>
+                  </div>
+                </div>
+              </div>
+              <span>「2018迅蚁秋季发布会」 - 揭秘专为物流而生的RA3无人机</span>
+            </li>
+            <li>
+              <div class="img-container">
+                <video class="pic" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/video/%E5%8C%BB%E7%96%97%E6%80%A5%E6%95%91_%E5%9F%8E%E5%B8%82%E5%8C%BB%E7%96%97.mp4" poster="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/imgs/poster3.jpg"></video>
+                <div class="operation operation-active">
+                  <div class="circle play-btn btn-active">
+                    <div class="triangle"></div>
+                  </div>
+                  <div class="circle download-btn btn-active">
+                    <span></span>
+                    <div class="rec1"></div>
+                    <div class="tri1"></div>
+                    <div class="rec2"></div>
+                  </div>
+                </div>
+              </div>
+              <span>医疗急救_城市医疗</span>
+            </li>
+            <li>
+              <div class="img-container">
+                <video class="pic" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/video/%E5%8C%BB%E7%96%97%E6%80%A5%E6%95%91_%E6%96%B0%E6%98%8C%E4%BA%BA%E5%8C%BB%E9%A3%9E%E8%A1%8C%E8%A7%86%E9%A2%91.mp4" poster="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/imgs/poster4.jpg"></video>
+                <div class="operation operation-active">
+                  <div class="circle play-btn btn-active">
+                    <div class="triangle"></div>
+                  </div>
+                  <div class="circle download-btn btn-active">
+                    <span></span>
+                    <div class="rec1"></div>
+                    <div class="tri1"></div>
+                    <div class="rec2"></div>
+                  </div>
+                </div>
+              </div>
+              <span>医疗急救_新昌人医飞行视频</span>
+            </li>
+            <li>
+              <div class="img-container">
+                <video class="pic" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/video/%E5%8D%B3%E6%97%B6%E9%85%8D%E9%80%81-CAAC%E8%BF%85%E8%9A%81%E5%88%86%E5%B8%83%E5%BC%8F%E9%A9%BE%E9%A9%B6%E5%91%98%E8%A7%86%E9%A2%91.mp4" poster="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/imgs/poster5.jpg"></video>
+                <div class="operation operation-active">
+                  <div class="circle play-btn btn-active">
+                    <div class="triangle"></div>
+                  </div>
+                  <div class="circle download-btn btn-active">
+                    <span></span>
+                    <div class="rec1"></div>
+                    <div class="tri1"></div>
+                    <div class="rec2"></div>
+                  </div>
+                </div>
+              </div>
+              <span>即时配送-CAAC迅蚁分布式驾驶员视频</span>
+            </li>
+            <li>
+              <div class="img-container">
+                <video class="pic" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/video/%E5%BA%94%E6%80%A5%E4%BF%9D%E9%9A%9C_%E8%BF%85%E8%9A%81x%E6%A2%A6%E9%A9%AC.mp4" poster="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/imgs/poster6.jpg"></video>
+                <div class="operation operation-active">
+                  <div class="circle play-btn btn-active">
+                    <div class="triangle"></div>
+                  </div>
+                  <div class="circle download-btn btn-active">
+                    <span></span>
+                    <div class="rec1"></div>
+                    <div class="tri1"></div>
+                    <div class="rec2"></div>
+                  </div>
+                </div>
+              </div>
+              <span>应急保障_迅蚁x梦马</span>
+            </li>
+            <li>
+              <div class="img-container">
+                <video class="pic" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/video/%E8%BF%85%E8%9A%81%E8%A7%86%E9%A2%91_ADNET%E9%85%8D%E9%80%81KFC.mp4" poster="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/imgs/poster7.jpg"></video>
+                <div class="operation operation-active">
+                  <div class="circle play-btn btn-active">
+                    <div class="triangle"></div>
+                  </div>
+                  <div class="circle download-btn btn-active">
+                    <span></span>
+                    <div class="rec1"></div>
+                    <div class="tri1"></div>
+                    <div class="rec2"></div>
+                  </div>
+                </div>
+              </div>
+              <span>迅蚁视频_ADNET配送KFC</span>
+            </li>
+          </ul>
+          <div class="small-title i18n" name="img-download">图片下载</div>
+          <ul class="img-info-ul img-ul">
+            <li>
+              <a href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture/%E5%8C%BB%E7%96%97%E6%80%A5%E6%95%91-%E4%BB%93%E5%89%8D%E5%8D%AB%E7%94%9F%E6%9C%8D%E5%8A%A1%E4%B8%AD%E5%BF%83.jpg" download="医疗急救-仓前卫生服务中心.jpg" target="_blank">
+                <img class="img" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture-compress/%E5%8C%BB%E7%96%97%E6%80%A5%E6%95%91-%E4%BB%93%E5%89%8D%E5%8D%AB%E7%94%9F%E6%9C%8D%E5%8A%A1%E4%B8%AD%E5%BF%83.jpg"/>
+              </a>
+              <span>医疗急救-仓前卫生服务中心</span>
+            </li>
+            <li>
+              <a href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture/%E5%8C%BB%E7%96%97%E6%80%A5%E6%95%91-%E4%BD%99%E6%9D%AD%E5%8D%AB%E7%94%9F%E6%9C%8D%E5%8A%A1%E4%B8%AD%E5%BF%83.jpg" download="医疗急救-仓前卫生服务中心.jpg" target="_blank">
+                <img class="img" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture-compress/%E5%8C%BB%E7%96%97%E6%80%A5%E6%95%91-%E4%BD%99%E6%9D%AD%E5%8D%AB%E7%94%9F%E6%9C%8D%E5%8A%A1%E4%B8%AD%E5%BF%83.jpg"/>
+              </a>
+              <span>医疗急救-余杭卫生服务中心</span>
+            </li>
+            <li>
+              <a href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture/%E5%8C%BB%E7%96%97%E6%80%A5%E6%95%91-%E6%B5%99%E4%BA%8C%E5%8C%BB%E9%99%A2.JPG" download="医疗急救-浙二医院.JPG" target="_blank">
+                <img class="img" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture-compress/%E5%8C%BB%E7%96%97%E6%80%A5%E6%95%91-%E6%B5%99%E4%BA%8C%E5%8C%BB%E9%99%A2.jpg"/>
+              </a>
+              <span>医疗急救-浙二医院</span>
+            </li>
+            <li>
+              <a href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture/%E5%90%8C%E5%9F%8E%E5%8D%B3%E9%85%8D-01.jpg" download="同城即配-01.jpg" target="_blank">
+                <img class="img" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture-compress/%E5%90%8C%E5%9F%8E%E5%8D%B3%E9%85%8D-01.jpg"/>
+              </a>
+              <span>同城即配-01</span>
+            </li>
+            <li>
+              <a href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture/%E5%90%8C%E5%9F%8E%E5%8D%B3%E9%85%8D-02.jpg" download="同城即配-02.jpg" target="_blank">
+                <img class="img" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture-compress/%E5%90%8C%E5%9F%8E%E5%8D%B3%E9%85%8D-02.jpg"/>
+              </a>
+              <span>同城即配-02</span>
+            </li>
+            <li>
+              <a href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture/%E5%A4%9A%E6%97%8B%E7%BF%BC%E6%97%A0%E4%BA%BA%E6%9C%BARA3.png" download="多旋翼无人机RA3.png" target="_blank">
+                <img class="img" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture-compress/%E5%A4%9A%E6%97%8B%E7%BF%BC%E6%97%A0%E4%BA%BA%E6%9C%BARA3.jpg"/>
+              </a>
+              <span>多旋翼无人机RA3</span>
+            </li>
+            <li>
+              <a href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture/%E5%A4%9A%E6%97%8B%E7%BF%BC%E6%97%A0%E4%BA%BA%E6%9C%BATR7S.png" download="多旋翼无人机TR7S.png" target="_blank">
+                <img class="img" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture-compress/%E5%A4%9A%E6%97%8B%E7%BF%BC%E6%97%A0%E4%BA%BA%E6%9C%BATR7S.jpg"/>
+              </a>
+              <span>多旋翼无人机TR7S</span>
+            </li>
+            <li>
+              <a href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture/%E6%97%A0%E4%BA%BA%E6%9E%A2%E7%BA%BD%E7%AB%99RH1.png" download="无人枢纽站RH1.png" target="_blank">
+                <img class="img" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture-compress/%E6%97%A0%E4%BA%BA%E6%9E%A2%E7%BA%BD%E7%AB%99RH1.jpg"/>
+              </a>
+              <span>无人枢纽站RH1</span>
+            </li>
+            <li>
+              <a href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture/%E8%BF%85%E8%9A%81-01.JPG" download="迅蚁-01.JPG" target="_blank">
+                <img class="img" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture-compress/%E8%BF%85%E8%9A%81-01.jpg"/>
+              </a>
+              <span>迅蚁-01</span>
+            </li>
+            <li>
+              <a href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture/%E8%BF%85%E8%9A%81-02.jpg" download="迅蚁-02.JPG" target="_blank">
+                <img class="img" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture-compress/%E8%BF%85%E8%9A%81-02.jpg"/>
+              </a>
+              <span>迅蚁-02</span>
+            </li>
+            <li>
+              <a href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture/%E4%B8%89%E6%9C%BA%E5%8D%8F%E4%BD%9C.png" download="三机协作.png" target="_blank">
+                <img class="img" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture-compress/%E4%B8%89%E6%9C%BA%E5%8D%8F%E4%BD%9C.jpg"/>
+              </a>
+              <span>三机协作</span>
+            </li>
+            <li>
+              <a href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture/%E9%82%AE%E6%94%BF%E9%85%8D%E9%80%81.jpg" download="邮政配送.jpg" target="_blank">
+                <img class="img" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/download/picture-compress/%E9%82%AE%E6%94%BF%E9%85%8D%E9%80%81.jpg"/>
+              </a>
+              <span>邮政配送</span>
+            </li>
+          </ul>
+          <div class="small-title i18n" name="white-paper-download" >白皮书下载</div>
+          <ul class="img-info-ul white-page">
+            <li>
+              <a href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/ADNET WHITE PAPER.pdf" download="ADNET WHITE PAPER.pdf" target="_blank">
+                <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/website-otherInfo/imgs/white-page.jpg">
+              </a>
+              <span>5G机器人运力网络白皮书</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="video-group">
+          <div class="video-group-btn">
+            <div class="btn-line1"></div>
+            <div class="btn-line2"></div>
+          </div>
+          <video class="video" id="video" src="" controls></video>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <script src="scripts/common.js?v={{version}}"></script>
+  <script src="scripts/otherInfo.js?v={{version}}"></script>
+</body>
+
+</html>

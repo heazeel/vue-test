@@ -1,0 +1,553 @@
+<!--
+ * @Description: 主入口
+ * @Author: linjia
+ * @Date: 2020-05-15 14:34:42
+ * @LastEditors: hezhijie
+ * @LastEditTime: 2020-10-28 10:04:34
+--> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="baidu-site-verification" content="code-b0kZDqIYM9" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="物流，无人机，我们正在构建快速、安全、零排放的机器人运力网络，利用AI技术赋予机器人自主运行并大规模协作的能力，让物的传递再无阻隔。“让一切美好即刻呈现”，是我们始终如一的使命。">
+  <meta name="keywords" content="物流,无人机,无人机物流,无人机配送">
+  <meta id="i18n_pagename" content="index,common" />
+  <title class="i18n" name="title">物流无人机_无人配送_迅蚁，创造快的乐趣</title>
+  <link rel="shortcut icon" type="image/x-icon" href="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/logo.ico" media="screen" >
+  <link rel="stylesheet"  href="styles/reset.css?v={{version}}"></script>
+  <link rel="stylesheet"  href="styles/common.css?v={{version}}"></script>
+  <link rel="stylesheet"  href="styles/index.css?v={{version}}"></script>
+  <script src="lib/jquery/jquery-3.2.1.min.js"></script>
+  <script src="lib/jquery/jquery.i18n.properties-1.2.7.js"></script>
+  <script src="scripts/languages.js"></script>
+</head>
+<body>
+  <!--[if lt IE 9]>
+    <p class="chromeframe">
+      <span>您使用的IE浏览器版本过低，本站不再支持，</span>
+      <a href="//windows.microsoft.com/">升级您的IE浏览器</a>
+      <span>，或使用</span>
+      <a href="//www.google.cn/chrome/">Google Chrome</a><a>、</a><a href="//www.firefox.com.cn/download/">Firefox</a>
+      <span>等高级浏览器，将会得到更好的体验！</span>
+    </p>
+  <![endif]--> 
+  <!-- 头部导航 -->
+  <div class="loading">
+    <div class="box">
+      <div class="one"></div>
+      <div class="two"></div>
+      <div class="three"></div>
+      <div class="four"></div>
+      <div class="five"></div>
+      <div class="six"></div>
+      <div class="seven"></div>
+      <h2>loading</h2>
+      <div id="loading-bar">
+        <div id="bar">
+          <div id="progress"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-nav-part"></div>
+
+  <div id="wrap">
+    <div id="main">
+      <div class="video-group">
+        <div class="video-group-btn">
+          <div class="btn-line1"></div>
+          <div class="btn-line2"></div>
+        </div>
+        <video class="video one" id="video1" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/%E8%BF%85%E8%9A%81%E8%A7%86%E9%A2%91_%E5%9F%8E%E5%B8%82%E5%8C%BB%E7%96%97.mp4" controls></video>
+        <video class="video two" id="video2" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/%E8%BF%85%E8%9A%81_2019%E6%A2%A6%E9%A9%AC%E5%BA%94%E6%80%A5%E4%BF%9D%E9%9A%9C.mp4" controls></video>
+        <video class="video two" id="video3" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/%E8%BF%85%E8%9A%81%E8%A7%86%E9%A2%91_%E5%9F%8E%E5%B8%82%E5%8C%BB%E7%96%97.mp4" controls></video>
+        <video class="video two" id="video4" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/%E8%BF%85%E8%9A%81%E8%A7%86%E9%A2%91_%E6%8D%B7%E9%9B%81TR7%E5%AE%A3%E4%BC%A0%E7%89%87.mp4" controls></video>
+        <video class="video two" id="video5" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/%E8%BF%85%E8%9A%81%E8%A7%86%E9%A2%91_ADNET%E9%85%8D%E9%80%81KFC.mp4" controls></video>
+      </div>
+      <div class="scene" id="scene-one">
+        <div class="title">
+          <!-- <span>DRONE DELIVERY</span> -->
+          <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/first-title.png"/>
+          <div id="line1"></div>
+        </div>
+
+        <div class="btn-group">
+          <div id="line2"></div>
+          <div id="play-btn">P L A Y</div>
+        </div>
+
+        <video id="video" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/front_page.mp4" loop muted>
+          <!-- src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/%E8%BF%85%E8%9A%81%E8%A7%86%E9%A2%91_%E5%9F%8E%E5%B8%82%E5%8C%BB%E7%96%97.mp4" -->
+          <!-- <source src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/front_page.mp4"> -->
+        </video> 
+        <div class="main-full-mask"></div>
+        <div class="mask"></div>
+        <svg id="arrow">
+          <path id="lineAB" d="M 50 0 l 0 150" stroke="#fff"
+          stroke-width="2" fill="none" />
+          <path id="lineBC" d="M 50 150 l -20 -20" stroke="#fff"
+          stroke-width="2" fill="none" />
+        </svg>
+      </div>
+      <div class="scene" id="scene-two">
+        <div class="background-img" id="background-img1">
+          <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/scene-two-background1.jpg"/>
+        </div>
+        <div class="background-img" id="background-img2">
+          <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/scene-two-background2.jpg"/>
+        </div>
+        <div class="background-img" id="background-img3">
+          <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/scene-two-background3.jpg"/>
+        </div>
+        <div class="background-img" id="background-img4">
+          <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/scene-two-background4.jpeg"/>
+        </div>
+        <ul>
+          <li class="active" id="nav1">01</li>
+          <li id="nav2">02</li>
+          <li id="nav3">03</li>
+          <li id="nav4">04</li>
+        </ul>
+        <div class="content-box">
+          <section class="scene-two-content active-in" id="content1">
+            <h1 class="i18n" name="content-box-content1-h1">应急保障</h1>
+            <p class="i18n" name="content-box-content1-p">TR7S能在绝大多数地面环境下完成起降，能满足各类赛事的场地环境。根据实际运行数据表明，无人机空中医疗急救网络有效避免道路障碍，
+              为赛事突发情况作出有效的快速响应。</p>
+            <div id="video2" class="button">
+              <div class="triangle"></div>
+              <div class="shadow"></div>
+            </div>
+          </section>
+          <section class="scene-two-content" id="content2">
+            <h1 class="i18n" name="content-box-content2-h1">医疗急救</h1>
+            <p class="i18n" name="content-box-content2-p">利用无人机安全快速的飞行优势，避免了二次污染的同时节省出大量人力物力，与时间赛跑，守护生命航线。</p>
+            <div id="video3" class="button">
+              <div class="triangle"></div>
+              <div class="shadow"></div>
+            </div>
+          </section>
+          <section class="scene-two-content" id="content3">
+            <h1 class="i18n" name="content-box-content3-h1">邮政快递</h1>
+            <p class="i18n" name="content-box-content3-p">利用“通用航空”与“快递”相结合的无人机快递新业态，解决特殊场景下的应急配送和偏远地区的邮政寄递配送问题。</p>
+            <div id="video4" class="button">
+              <div class="triangle"></div>
+              <div class="shadow"></div>
+            </div>
+          </section>
+          <section class="scene-two-content" id="content4">
+            <h1 class="i18n" name="content-box-content4-h1">即时配送</h1>
+            <p class="i18n" name="content-box-content4-p">让配送员从繁重的体力劳动中解脱出来，也让每一位消费者能够获得随时待命、快速送达的极致配送服务体验。</p>
+            <div id="video5" class="button">
+              <div class="triangle"></div>
+              <div class="shadow"></div>
+            </div>
+          </section>
+        </div>
+        <div class="pic-box">
+          <div class="pic-item" id="item1">  
+            <div class="pic"></div>
+          </div>
+          <div class="pic-item" id="item2">
+            <div class="pic"></div>
+            <div class="station"></div>
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="pic-item" id="item3">
+            <div class="pic"></div>
+          </div>
+          <div class="pic-item" id="item4">
+            <div class="pic"></div>
+          </div>
+        </div>
+        <div class="background-rise">
+          <div class="background-rise-item" id="background-rise-item19">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item20">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item15">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item16">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item17">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item18">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item1">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item2">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item3">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item4">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item5">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item6">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item7">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item8">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item9">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item10">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item11">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item12">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item13">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+          <div class="background-rise-item" id="background-rise-item14">
+            <div class="ground-top"></div>
+            <div class="ground-bottom"></div>
+          </div>
+        </div>
+        <div id="uavGroup">
+          <div class="title">
+            <p class="i18n" id="p1" name="uavGroup-title">全自动化即时配送网络</p>
+            <div class="line-mask">
+              <div class="line"></div>
+            </div>
+            <p class="i18n" id="p2" name="uavGroup-p">自动驾驶/自动规划/自动调度</p>
+          </div>
+          <div class="background">
+            <img class="architecture-back" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/architecture-back.png"/>
+            <div class="ground">
+              <img class="car" id="car1" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/car1.png"/>
+              <img class="car" id="car2" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/car2.png"/>
+              <img class="car" id="car3" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/car2.png"/>
+              <img class="car" id="car4" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/car1.png"/>
+              <div id="river">
+                <div id="river-mask"></div>
+              </div>
+              <img id="ground" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/ground.png"/>
+              <div class="light" id="light1">
+                <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/light.png"/>
+              </div>
+              <img class="station" id="station1" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/station.png"/>
+              <div class="light" id="light2">
+                <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/light.png"/>
+              </div>
+              <img class="station" id="station2" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/station.png"/>
+              <div class="light" id="light3">
+                <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/light.png"/>
+              </div>
+              <img class="station" id="station3" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/station.png"/>
+              <div class="light" id="light4">
+                <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/light.png"/>
+              </div>
+              <img class="station" id="station4" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/station.png"/>
+              <div class="light" id="light5">
+                <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/light.png"/>
+              </div>
+              <img class="station" id="station5" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/station.png"/>
+            </div>
+            <div class="building">
+              <img id="building1" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/building1.png"/>
+              <img id="building2" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/building2.png"/>
+              <img id="building3" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/building3.png"/>
+              <img id="building4" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/building4.png"/>
+              <img id="building5" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/building5.png"/>
+              <img id="building6" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/building6.png"/>
+              <img id="building7" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/building7.png"/>
+              <img id="building8" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/building8.png"/>
+              <img id="building9" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/building9.png"/>
+              <img id="building10" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/building10.png"/>
+              <img id="building11" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/building11.png"/>
+              <img id="building12" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/building12.png"/>
+            </div>
+            <div class="uav">
+              <img id="uav1" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/uav.png"/>
+              <img id="uav2" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/uav.png"/>
+              <img id="uav3" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/uav.png"/>
+              <img id="uav4" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/uav.png"/>
+              <img id="uav5" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/uav.png"/>
+            </div>
+            <svg id="uavMovingLine" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="greenGradient-right">
+                  <stop offset="0%" stop-color="rgba(255,160,83,0.05)" />
+                  <stop offset="95%" stop-color="rgba(255,224,89,1)" />
+                  <stop offset="100%" stop-color="rgba(255,224,89,0.05)" />
+                </linearGradient>
+                <linearGradient id="greenGradient-left">
+                  <stop offset="0%" stop-color="rgba(255,224,89,0.05)" />
+                  <stop offset="5%" stop-color="rgba(255,224,89,1)" />
+                  <stop offset="100%" stop-color="rgba(255,160,83,0.05)" />
+                </linearGradient>
+                <linearGradient id="greenGradient-far">
+                  <stop offset="0%" stop-color="rgba(255,160,83,0.05)" />
+                  <stop offset="70%" stop-color="rgba(255,224,89,1)" />
+                  <stop offset="100%" stop-color="rgba(255,224,89,0.05)" />
+                </linearGradient>
+              </defs>
+              <g>
+                <path class="uavLine" id="uavLine1" d="m1032.65631,467.78124c1.5625,1.5625 -112.5001,-118.7501 -184.37516,390.62534" opacity="1" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="url(#greenGradient-left)" fill="none"/>
+                <path class="uavLine" id="uavLine2" d="m1040.41067,456.5692c0,0 -216.23038,-313.53406 -627.06811,193.25591" opacity="1" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="url(#greenGradient-left)" fill="none"/>
+                <path class="uavLine" id="uavLine3" d="m1047.50626,454.09681c0,0 249.99979,-251.61269 408.87062,-125.80635" opacity="1" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="url(#greenGradient-right)" fill="none"/>
+                <path class="uavLine" id="uavLine4" d="m1038.70375,467.46296c0,0 251.85199,-285.18534 648.1485,368.51872" opacity="1" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="url(#greenGradient-right)" fill="none"/>
+              </g>
+              <g>
+                <path class="uavLine" id="uavLine5" d="m1685.39011,832.5796c0,0 -440.00333,-463.08043 -841.54484,29.23099" opacity="1" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="url(#greenGradient-left)" fill="none"/>
+                <path class="uavLine" id="uavLine6" d="m1684.16667,815.33333c0,1.66667 -10,-555 -226.66667,-480" opacity="1" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="url(#greenGradient-left)" fill="none"/>
+                <path class="uavLine" id="uavLine7" d="m839.16667,860.33333c0,0 -195,-148.33333 -618.33333,96.66667" opacity="1" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="url(#greenGradient-left)" fill="none"/>
+                <path class="uavLine" id="uavLine8" d="m414.16667,642c0,0 110,-163.33333 426.66667,208.33333" opacity="1" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="url(#greenGradient-right)" fill="none"/>
+                <path class="uavLine" id="uavLine9" d="m404.16667,635.33333c0,0 -160,-158.33333 -403.33333,-65" opacity="1" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="url(#greenGradient-left)" fill="none"/>
+                <path class="uavLine" id="uavLine10" d="m410.83333,633.66667c0,0 -8.33333,-223.33333 -86.66667,-320" opacity="1" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="url(#greenGradient-far)" fill="none"/>
+                <path class="uavLine" id="uavLine11" d="m1457.5,328.66667c0,0 -30,-151.66667 -118.33333,-255" opacity="1" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="url(#greenGradient-far)" fill="none"/>
+                <path class="uavLine" id="uavLine12" d="m1460.83333,328.66667c0,0 155,-315 363.33333,-326.66667" opacity="1" fill-opacity="null" stroke-opacity="null" stroke-width="4" stroke="url(#greenGradient-right)" fill="none"/>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="scene" id="scene-three">
+        <div class="TR7SFont">TR7S</div>
+        <div id="uav-TR7S">
+          <img class="body" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/TR7S/TR7S动效-20200612.81.1.png"/>
+          <div class="rotor-box">
+            <img class="rotor" id="rotor1" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/TR7S/TR7S-rotor.png"/>
+            <img class="rotor" id="rotor2" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/TR7S/TR7S-rotor.png"/>
+            <img class="rotor" id="rotor3" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/TR7S/TR7S-rotor.png"/>
+            <img class="rotor" id="rotor4" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/TR7S/TR7S-rotor.png"/>
+            <img class="rotor" id="rotor5" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/TR7S/TR7S-rotor.png"/>
+            <img class="rotor" id="rotor6" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/TR7S/TR7S-rotor.png"/>
+          </div>
+        </div>
+        
+        <div id="main-content1">
+          <h1 class="i18n title" name="main-content1-title">多旋翼无人机TR7S</h1>
+          <p class="i18n content1" name="main-content1-content1">为应对复杂的地形地貌而生，跨越山河海洋，只为探索更丰富的应用</p>
+          <p class="i18n content2" name="main-content1-content2">场景，实现更多行业应用需求</p>
+        </div>
+
+        <div id="main-content2">
+          <div class="table">
+            <div class="item" id="item1">
+              <span class="i18n top" name="main-content2-item1">巡航速度</span>
+              <div>
+                <span class="bottom">50</span>km/h
+              </div>
+            </div>
+            <div class="item" id="item2">
+              <span class="i18n top" name="main-content2-item2">最大航程</span>
+              <div>
+                <span class="bottom">22</span>km
+              </div>
+            </div>
+            <div class="item" id="item3">
+              <span class="i18n top" name="main-content2-item3">最大载重</span>
+              <div>
+                <span class="bottom">4</span>kg
+              </div>
+            </div>
+            <div class="item" id="item4">
+              <span class="i18n top" name="main-content2-item4">抗风级别</span>
+              <div>
+                <span class="bottom">6</span><span class="i18n" name="level">级</span>
+              </div>
+            </div>
+            <div class="item" id="item5">
+              <span class="i18n top" name="main-content2-item5">货箱容积</span>
+              <div>
+                <span class="bottom">40*30*25</span>
+              </div>
+            </div>
+          </div>
+          <div class="tips">
+            <span class="i18n" name="main-content2-tips">雨雪天正常运行</span>
+          </div>
+        </div>
+
+        <div id="RA3">
+          <div class="font">RA3</div>
+          <div class="rotor-box">
+            <img class="rotor" id="rotor1" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/RA3/RA3-rotor.png"/>
+            <img class="rotor" id="rotor2" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/RA3/RA3-rotor.png"/>
+            <img class="rotor" id="rotor3" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/RA3/RA3-rotor.png"/>
+            <img class="rotor" id="rotor4" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/RA3/RA3-rotor.png"/>
+            <img class="rotor" id="rotor5" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/RA3/RA3-rotor.png"/>
+            <img class="rotor" id="rotor6" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/RA3/RA3-rotor.png"/>
+          </div>
+        </div>
+        <div id="main-content3">
+          <div class=""></div>
+          <h1 class="i18n title" name="main-content3-title">多旋翼无人机RA3</h1>
+          <p class="i18n content1" name="main-content3-content1">专注于城市场景的飞行，极致的人性化设计及安全运行</p>
+          <p class="i18n content2" name="main-content3-content2">体验将颠覆你对即时物流的认知</p>
+        </div>
+        <div id="main-content4">
+          <div class="table">
+            <div class="item" id="item1">
+              <span class="i18n top" name="main-content4-item1">巡航速度</span>
+              <div>
+                <span class="bottom">45</span>km/h
+              </div>
+            </div>
+            <div class="item" id="item2">
+              <span class="i18n top" name="main-content4-item2">最大航程</span>
+              <div>
+                <span class="bottom">20</span>km
+              </div>
+            </div>
+            <div class="item" id="item3">
+              <span class="i18n top" name="main-content4-item3">最大载重</span>
+              <div>
+                <span class="bottom">5</span>kg
+              </div>
+            </div>
+            <div class="item" id="item4">
+              <span class="i18n top" name="main-content4-item4">抗风级别</span>
+              <div>
+                <span class="bottom">6</span><span class="i18n" name="level">级</span>
+              </div>
+            </div>
+            <div class="item" id="item5">
+              <span class="i18n top" name="main-content4-item5">货箱容积</span>
+              <div>
+                <span class="bottom">40*30*20</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="RH1">
+          <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/RH1/rh1/智能机场RH1-20191028-adnet - 官网首页.131.1.png"/>
+        </div>
+        <div id="main-content5">
+          <div id="main-content5-RA3">
+            <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/RA3/ra3/RA3-1.129.241.png"/> 
+          </div>
+          <div id="RH1">
+            <div id="left">
+              <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/RH1/RH1-left.png"/>
+              <img id="main-content5-RA3-shadow1" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/RA3/RA3-shadow.png"/>
+            </div>
+            <div id="right">
+              <img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/RH1/RH1-right.png"/>
+              <img id="main-content5-RA3-shadow2" src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/RA3/RA3-shadow.png"/>              
+            </div>
+          </div>
+        </div>
+
+        <div id="main-content6">
+          <div class="RH1Font">RH1</div>
+          <h1 class="i18n title" name="main-content6-title">无人枢纽站 RH1</h1>
+          <p class="i18n content1" name="main-content6-content1">连接城市的地面与天空，支持多种货物的暂存与流转</p>
+          <p class="i18n content2" name="main-content6-content2">与RA3搭配协同合作，利用人机互动安全守护每一件</p>
+          <p class="i18n content2" name="main-content6-content3">货品的进出</p>
+        </div>
+
+        <div id="main-content7">
+          <div class="table">
+            <div class="row" id="row1">
+              <div class="item" id="item1">
+                <span class="i18n top" name="main-content7-item1">货位箱</span>
+                <div>
+                  <span class="bottom">6</span><span class="i18n" name="nums">个</span>
+                </div>
+              </div>
+              <div class="item" id="item2">
+                <span class="i18n top" name="main-content7-item2">停机坪</span>
+                <div>
+                  <span class="bottom">1</span><span class="i18n" name="nums">个</span>
+                </div>
+              </div>
+              <div class="item" id="item3">
+                <span class="i18n top" name="main-content7-item3">车库位</span>
+                <div>
+                  <span class="bottom">2</span><span class="i18n" name="nums">个</span>
+                </div>
+              </div>
+            </div>
+            <div class="row" id="row2">
+              <div class="item" id="item4">
+                <span class="i18n top" name="main-content7-item4">最大起降频次</span>
+                <div>
+                  <span class="bottom">30</span>/h
+                </div>
+              </div>
+              <div class="item" id="item5">
+                <span class="i18n top" name="main-content7-item5">最大货物吞吐量</span>
+                <div>
+                  <span class="bottom">45</span>/h
+                </div>
+              </div>
+              <div class="item" id="item6">
+                <span class="i18n top" name="main-content7-item6">不间断运行</span>
+                <div>
+                  <span class="bottom">24*7</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="main-content8">
+          <h1 class="i18n title" name="main-content8-title">三机协作</h1>
+          <p class="i18n content1" name="main-content8-content1">无人机物流运行过程融合了无人机、无人枢纽站和无人车等不同形态的机器人
+            ，并通过算法让机器人之间无缝协同合作，进而让无人机空中配送的时效优势和无人枢纽站的物质
+            循环与用户交互友好性充分互补</p>
+          <div class="content2"><img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/point.png"/></div>
+        </div>
+
+        <div class="RH1-shadow">
+          <div class="RH1-shadow-body"></div>
+        </div>
+
+        <div class="mask">
+          <div class="TR7SLogo"><img src="https://xyi-web.oss-cn-hangzhou.aliyuncs.com/imgs/index/TR7S-logo.png"/></div>
+        </div>
+        <footer class="page-footer-part container row"></footer>
+      </div>
+    </div>
+  </div>
+  <script src="scripts/common.js?v={{version}}"></script>
+  <script src="scripts/index.js?v={{version}}"></script>
+</body>
+</html>
